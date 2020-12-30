@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Reaction_Roles</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/assets/css/beter-nav.css">
+    <link rel="stylesheet" href="/assets/css/Dark-NavBar-1.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="/assets/css/new.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body style="background-color: rgb(40,45,50);">
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+            style="height: 80px;background-color: rgb(40,45,50);color: #ffffff;">
+            <div class="container-fluid"><a class="navbar-brand" href="/">Reaction Roles</a><button
+                    class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle
+                        navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse text-center" id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto" id="static">
+                        <li class="nav-item border rounded-0" role="presentation" style="margin-right: 5px;"><a
+                                class="nav-link" href="https://reactionroles.com/discord"
+                                style="color: #ffffff;">Support</a></li>
+                        <li class="nav-item border rounded-0" role="presentation" style="margin-right: 5px;"><a
+                                class="nav-link" href="https://reactionroles.coms/commands"
+                                style="color: #ffffff;">Commands</a></li>
+                        <li class="nav-item border rounded-0" role="presentation"><a class="nav-link"
+                                href="https://reactionroles.com/faq" style="color:#ffffff;">Faq</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto" id="login" style="display:none;">
+                        <li class="nav-item border rounded-0" role="presentation"><a class="nav-link" href="auth/"
+                                style="color:#ffffff;">Log In With Discord</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto" id="loggedin">
+                        <li class="nav-item border rounded-0" role="presentation" style="margin-right: 5px;"><a
+                                class="nav-link" href="https://reactionroles.com/dashboard/"
+                                style="color: #ffffff;">Dashboard</a></li>
+                        <li class="nav-item border rounded-0 border-danger" role="presentation"><a
+                                class="nav-link border-danger" href="https://reactionroles.com/logout"
+                                style="color:#ffffff;"><i class="icon-logout"></i><em>&nbsp;Log out&nbsp;</em></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main style="color: rgb(255,255,255);">
+        <div class="container text-center">
+            <div class="row" style="margin-top: 40px;">
+                <div class="col-8 col-sm-3 col-md-5 text-right"><img
+                        src="https://cdn.discordapp.com/avatars/{{data2.id}}/{{data2.avatar}}.jpg?size=128"
+                        style="background-size: cover;background-repeat: no-repeat;background-position: 0%;"></div>
+                <div class="col-10 col-sm-9 col-md-7 text-left" style="margin-top: 10px;">
+                    <h1>Hello {{data2.username}}<br></h1>
+                    <h3>Here is a list of servers you can edit.</h3>
+                </div>
+            </div>
+            {{#if data}}
+            <div class="row" style="margin-top: 30px;background-color: rgb(40,45,50);padding: 15px;">
+                {{#each data}}
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="padding: 15px;">
+                    <a href="https://reactionroles.com/servers/{{this.id}}">
+                        {{#if this.icon}}
+
+                        <div
+                            style="width: 100%;padding-top: 100%;background-image: url('https://cdn.discordapp.com/icons/{{this.id}}/{{this.icon}}?size=256');background-position: center;background-size: cover;background-repeat: no-repeat;position: relative;border-radius: .5rem;border: 2px solid #FFF;/*max-width: 200px;*//*max-height: 200px;*/">
+                            <span class="text-white"
+                                style="position: absolute;top: auto;left: 0;bottom: 0;right: 0;background-color: rgba(0,0,0,0.6);padding: 3px;border-radius: 0px 0px .5rem .5rem;">{{this.name}}</span>
+                        </div>
+                        {{else}}
+                        <div
+                            style="width: 100%;padding-top: 100%;background-image: url(/assets/img/no-icon.png);background-position: center;background-size: cover;background-repeat: no-repeat;position: relative;border-radius: .5rem;border: 2px solid #FFF;/*max-width: 200px;*//*max-height: 200px;*/">
+                            <span class="text-white"
+                                style="position: absolute;top: auto;left: 0;bottom: 0;right: 0;background-color: rgba(0,0,0,0.6);padding: 3px;border-radius: 0px 0px .5rem .5rem;">{{this.name}}</span>
+                        </div>
+                        {{/if}}
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+    </main>
+    <div class="footer-dark" style="padding-top: 0px;padding-bottom: 10px;">
+        <footer>
+            <div class="container">
+                <p class="copyright">Droplet Development © 2019</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/better-nav.js"></script>
+    <script src="/assets/js/commandNav.js"></script>
+    <script src="/assets/js/rrCommand.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Droplet Store</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<form id="coupon"></form id="coupon">
+<form id="currency"></form id="currency">
+
+
+<body style="background-color: rgb(40,45,50);">
+    <header>
+        <div class="container text-center" style="margin-top: 70px;">
+            <div> <a href="https://store.dropletdev.com"><img style="width: 250px;"
+                        src="/assets/img/Droplet%20(2).png"></a>
+                <h1 style="color: rgb(255,255,255);">Droplet Development<br>Premium</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container" style="margin-top: 50px;">
+            <form id="purchase" method="post">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center centered" style="width: auto;">
+                        <h5 style="color: rgb(255,255,255);">Select a guild:<br><br></h5>
+                        <div class="form-group">
+                            <select name="guild" class="selects buttons" style="padding-left: 3px;padding-right: 3px;">
+                                {{#each guilds}}
+                                <option value="{{this.id}}" selected="">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-auto text-center" style="width: auto;">
+                        <h5 style="color: rgb(255,255,255);">Select a plan:<br><br></h5>
+                        <div class="form-group">
+
+                            <select id="price" name="price" class="selects buttons"
+                                style="padding-right: 3px;padding-left: 3px;">
+                                # right here
+                                {{#each bots}}
+                                <option value="{{this.code}}" id="{{this.code}}" price="{{this.price}}" selected="">
+                                    {{this.name}} -
+                                    ${{this.price}} USD</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <div class="col-auto text-center" style="width: auto;">
+                        <div class="form-group">
+                            <input type="text" class="selects" name="appliedCoupon" placeholder="Coupon Code"
+                                id="appliedCoupon" style="padding-left: 10px;display:none;">
+                            <input type="text" class="selects buttons" name="coupon" form="coupon"
+                                placeholder="Coupon Code" id="coupons" style="padding-left: 10px;">
+                            <button class="selects buttons" id="couponButton" type="submit" form="coupon"
+                                style="font-size: 18px; margin-left:5px;">Apply
+                                Coupon!</button> </div>
+                        <p style="color: green;margin-top: 3px;display: none; font-size: 16px;" id="applied">Coupon has
+                            been Applied!</p>
+
+                        <p style="color: red;margin-top: 3px;display: none;" id="error">*Invalid Coupon Code</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center" style="margin-top: 20px;">
+                    <div class="col-auto text-center" style="width: auto;">
+                        <div class="form-group">
+                            <button class="btn selects buttons" id="purchaseButton" type="submit"
+                                style="font-size: 20px;"></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div class="footer-basic" style="background-color: rgb(40,45, 50);color: rgb(255,255,255);">
+        <footer>
+            <p class="copyright">Droplet Development © 2019</p>
+        </footer>
+    </div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/purchase.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/axios/axios.min.js"></script>
+
+</body>
+
+</html>

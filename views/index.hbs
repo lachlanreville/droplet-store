@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Droplet Store</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body style="background-color: rgb(40, 45, 50);">
+    <header>
+        <div class="container text-center" style="margin-top: 70px;">
+            <div><a href="https://store.dropletdev.com"><img style="width: 250px;"
+                        src="/assets/img/Droplet%20(2).png"></a>
+                <h1 style="color: rgb(255,255,255);">Droplet Development<br>Premium</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container text-center" style="margin-top: 50px;">
+            {{#if data}}
+            <div class="col">
+                <div class="row justify-content-center">
+                    {{#each data}}
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+                        style="margin-top: 15px;margin-bottom: 15px;">
+                        <a href="{{this.href}}">
+                            <div class="urmumsgay" style="padding-bottom: 15px;padding-top: 15px;"><img
+                                    style="width: 200px;" src="{{this.image}}">
+                                <h4 style="color: rgb(255,255,255);margin-top: 5px;font-size: 26px;">{{this.name}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </main>
+    <div class="footer-basic" style="background-color: rgb(40,45, 50);color: rgb(255,255,255);">
+        <footer>
+            <p class="copyright">Droplet Development © 2019</p>
+        </footer>
+    </div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

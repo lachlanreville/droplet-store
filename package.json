@@ -1,0 +1,34 @@
+{
+  "name": "more-cancer",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.3",
+    "crypto-random-string": "^3.0.1",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-bearer-token": "^2.4.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.1",
+    "express-validator": "^5.3.1",
+    "hbs": "^4.0.5",
+    "http-errors": "~1.6.2",
+    "moment": "^2.24.0",
+    "morgan": "~1.9.0",
+    "mysql2": "^1.6.5",
+    "node-sass-middleware": "0.11.0",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^2.0.2",
+    "paypal-rest-sdk": "^1.8.1",
+    "pdf-creator-node": "^1.4.0",
+    "query-string": "^6.8.1",
+    "randomstring": "^1.1.5",
+    "sequelize": "^5.19.1",
+    "unique-string": "^2.0.0"
+  }
+}
